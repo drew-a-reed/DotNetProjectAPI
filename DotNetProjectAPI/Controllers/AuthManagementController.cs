@@ -58,7 +58,8 @@ namespace DotNetProjectAPI.Controllers
 					return Ok(new RegistrationRequestResponse()
 					{
 						Result = true,
-						Token = token
+						Token = token,
+						UserId = newUser.Id
 					});
 				}
 
@@ -90,7 +91,8 @@ namespace DotNetProjectAPI.Controllers
 					return Ok(new LoginRequestResponse()
 					{
 						Token = token,
-						Result = true
+						Result = true,
+						UserId = existingUser.Id
 					});
 
 				}
